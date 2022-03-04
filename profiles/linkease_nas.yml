@@ -1,0 +1,9 @@
+---
+description: Add the linkease nas dependencies
+feeds:
+  - name: linkease_nas
+    uri: git@github.com:linkease/nas-packages.git
+    branch: master
+
+packages:
+  - quickstart

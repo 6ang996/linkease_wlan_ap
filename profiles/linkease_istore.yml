@@ -1,0 +1,9 @@
+---
+description: Add the linkease istore dependencies
+feeds:
+  - name: linkease_istore
+    uri: git@github.com:linkease/istore.git
+    branch: main
+
+packages:
+  - luci-app-store

@@ -1,0 +1,9 @@
+---
+description: Add the linkease nas luci dependencies
+feeds:
+  - name: linkease_nas_luci
+    uri: git@github.com:linkease/nas-packages-luci.git
+    branch: main
+    
+packages:
+  - luci-app-quickstart

@@ -1,0 +1,14 @@
+---
+description: Add the webui dependencies
+feeds:
+  - name: luci
+    uri: https://gitee.com/wlan-ap/luci.git
+    revision: d24760e60a83b63f316c7b186e30636b5baa5481
+
+packages:
+  - cgi-io
+  - liblucihttp
+  - lua
+  - luci-base
+  - uhttpd
+  - uhttpd-mod-ubus
