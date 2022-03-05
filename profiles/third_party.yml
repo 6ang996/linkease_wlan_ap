@@ -7,3 +7,7 @@ feeds:
 
 packages:
   - luci-theme-argon
+
+diffconfig: |
+  CONFIG_FEED_third_party=m
+  

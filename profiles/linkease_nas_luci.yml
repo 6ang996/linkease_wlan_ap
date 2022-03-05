@@ -7,3 +7,7 @@ feeds:
     
 packages:
   - luci-app-quickstart
+
+diffconfig: |
+  CONFIG_FEED_linkease_nas_luci=m
+  
