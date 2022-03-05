@@ -1,0 +1,10 @@
+---
+description: Add the system base dependencies
+
+packages:
+  - cgi-io
+  - liblucihttp
+  - lua
+  - luci-base
+  - uhttpd
+  - uhttpd-mod-ubus

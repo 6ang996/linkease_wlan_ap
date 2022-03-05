@@ -3,7 +3,7 @@ description: Add the third party packages dependencies
 feeds:
   - name: third_party
     uri: git@github.com:linkease/istore-packages.git
-    branch: mian
+    branch: main
 
 packages:
   - luci-theme-argon

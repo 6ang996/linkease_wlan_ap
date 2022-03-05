@@ -1,7 +1,8 @@
-repo:  https://gitee.com/wlan-ap/openwrt.git
+repo: https://github.com/openwrt/openwrt.git
 branch: openwrt-21.02
 revision: b4d7885af70a42df7577157b96f941500bd17bfb
 output_dir: ./output
 
 patch_folders:
-  - patches/x86-64
+  - patches/base
+  - patches/linkease/x86_64
