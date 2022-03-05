@@ -13,11 +13,12 @@ include:
   - third_party
 
 packages:
-  - curl
   - docker
   - dockerd
   - luci-app-dockerman
+  - ttyd
+  - luci-app-ttyd
+  - block-mount
 
 diffconfig: |
   CONFIG_VMDK_IMAGES=y
-  
