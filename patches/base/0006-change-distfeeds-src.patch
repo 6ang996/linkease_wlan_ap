@@ -1,0 +1,26 @@
+From bb2a897f045623d90caabb5f587fab2ba165c9d7 Mon Sep 17 00:00:00 2001
+From: ziguayungui <244753440@qq.com>
+Date: Sat, 5 Mar 2022 17:26:58 +0800
+Subject: [PATCH] change distfeeds src
+
+---
+ package/base-files/Makefile | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/package/base-files/Makefile b/package/base-files/Makefile
+index 8a1ddf96f5..793b72fd51 100644
+--- a/package/base-files/Makefile
++++ b/package/base-files/Makefile
+@@ -199,7 +199,8 @@ define Package/base-files/install
+ 	$(if $(CONFIG_CLEAN_IPKG),, \
+ 		mkdir -p $(1)/etc/opkg; \
+ 		$(call FeedSourcesAppend,$(1)/etc/opkg/distfeeds.conf); \
+-		$(VERSION_SED_SCRIPT) $(1)/etc/opkg/distfeeds.conf)
++		$(VERSION_SED_SCRIPT) $(1)/etc/opkg/distfeeds.conf; \
++		$(SED) 's_downloads.openwrt.org_mirrors.tuna.tsinghua.edu.cn/openwrt_' $(1)/etc/opkg/distfeeds.conf)
+ 	$(if $(CONFIG_IPK_FILES_CHECKSUMS),, \
+ 		rm -f $(1)/sbin/pkg_check)
+ 
+-- 
+2.25.1
+

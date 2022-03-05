@@ -1,0 +1,26 @@
+From 44f6adbbca067617060177217d8ce3413fd36cb1 Mon Sep 17 00:00:00 2001
+From: ziguayungui <244753440@qq.com>
+Date: Sat, 5 Mar 2022 17:23:23 +0800
+Subject: [PATCH] change timezone to shanghai
+
+---
+ package/base-files/files/bin/config_generate | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/package/base-files/files/bin/config_generate b/package/base-files/files/bin/config_generate
+index 596fcf41fa..5acecfb665 100755
+--- a/package/base-files/files/bin/config_generate
++++ b/package/base-files/files/bin/config_generate
+@@ -302,7 +302,8 @@ generate_static_system() {
+ 		delete system.@system[0]
+ 		add system system
+ 		set system.@system[-1].hostname='OpenWrt'
+-		set system.@system[-1].timezone='UTC'
++		set system.@system[-1].timezone='CST-8'
++		set system.@system[-1].zonename='Asia/Shanghai'
+ 		set system.@system[-1].ttylogin='0'
+ 		set system.@system[-1].log_size='64'
+ 		set system.@system[-1].urandom_seed='0'
+-- 
+2.25.1
+
