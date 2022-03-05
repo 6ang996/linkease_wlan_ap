@@ -22,3 +22,5 @@ packages:
 
 diffconfig: |
   CONFIG_VMDK_IMAGES=y
+  CONFIG_LUCI_LANG_zh_Hans=y
+  
