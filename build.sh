@@ -76,8 +76,10 @@ if [ -n "${SETUPCONFIG}" ]; then
         cd ${BUILD_DIR}
         ./scripts/gen_config.py ${TARGET} || exit 1
         cd -
-        exit 1
+
+        cd ${BUILD_DIR}
         make -j$(nproc) download V=s || make download V=s IGNORE_ERRORS=1
+        cd -
     fi
 else
     echo "### Building image ..."
