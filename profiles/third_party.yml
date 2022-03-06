@@ -7,6 +7,7 @@ feeds:
 
 packages:
   - luci-theme-argon
+  - luci-app-diskman
 
 diffconfig: |
   CONFIG_FEED_third_party=m
