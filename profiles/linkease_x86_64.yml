@@ -19,8 +19,15 @@ packages:
   - ttyd
   - luci-app-ttyd
   - block-mount
+  - kmod-tun
+  - dnsmasq-full
+  - iptables-mod-nat-extra
+  - iptables-mod-tproxy
+  - iptables-mod-iprange
+
 
 diffconfig: |
   CONFIG_VMDK_IMAGES=y
   CONFIG_LUCI_LANG_zh_Hans=y
+  # CONFIG_PACKAGE_dnsmasq is not set
   
