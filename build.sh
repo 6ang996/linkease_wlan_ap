@@ -77,6 +77,13 @@ if [ -n "${SETUPCONFIG}" ]; then
         ./scripts/gen_config.py ${TARGET} || exit 1
         cd -
 
+        echo "### Get dl dir ..."
+        cd ${BUILD_DIR}
+        if [ ! -d dl ]; then
+        git clone --depth 1 https://gitee.com/wlan-ap/linkease_openwrt_dl.git dl || true
+            cd dl && ./large_file_merge.sh && cd ..
+        fi
+
         cd ${BUILD_DIR}
         make -j$(nproc) download V=s || make download V=s IGNORE_ERRORS=1
         cd -
